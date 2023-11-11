@@ -1,0 +1,21 @@
+/**
+ * @note Don't import global files here, import them on vite config file
+ */
+
+// Vendors
+// @import 'vendors/normalize';
+
+// base
+@import 'base/base';
+@import 'base/typography';
+
+// components
+@import 'components/buttons';
+@import 'components/navigation';
+
+// layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// pages
+@import 'pages/home';

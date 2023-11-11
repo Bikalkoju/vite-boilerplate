@@ -1,0 +1,15 @@
+{
+  "name": "vite-boilerplate",
+  "version": "1.0.0",
+  "description": "This is vite boilerplate to compile js and scss",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "Bikal Koju",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.5.0"
+  }
+}
