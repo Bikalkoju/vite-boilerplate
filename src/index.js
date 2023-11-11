@@ -1,6 +1,3 @@
-// Import vendors files
-import './js/vendor';
-
 // Import main js file
 import './js/main';
 

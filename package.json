@@ -10,6 +10,13 @@
   "author": "Bikal Koju",
   "license": "ISC",
   "devDependencies": {
+    "browserslist": "^4.22.1",
+    "postcss-preset-env": "^9.3.0",
+    "sass": "^1.69.5",
     "vite": "^4.5.0"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
