@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import postcssPresetEnv from 'postcss-preset-env';
+import VitePluginLibAssets from '@laynezh/vite-plugin-lib-assets';
 
 const globalSCSS = {
     variables: './src/scss/global/variables.scss',
@@ -26,8 +27,20 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, 'src/index.js'),
-            name: 'vite-boilerplate',
-            fileName: (format) => `vite-boilerplate.${format}.js`,
+            name: 'main',
+            fileName: 'main',
+            formats: ['es', 'umd']
         }
-    }
+    },
+    plugins: [
+        VitePluginLibAssets({
+            name: '[name].[ext]',
+            outputPath: (url, resourcePath, resourceQuery) => {
+                if (url.match(/\.(png|svg|jpg|jpeg|gif|webp)$/i)) return 'images';
+                if (url.match(/\.(woff|woff2|eot|ttf|otf)$/i)) return 'fonts';
+                if (url.match(/\.(mp4|webm|ogv)/i)) return 'videos';
+                return 'assets';
+            }
+        })
+    ]
 })

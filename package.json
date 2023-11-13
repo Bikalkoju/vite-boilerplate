@@ -10,6 +10,7 @@
   "author": "Bikal Koju",
   "license": "ISC",
   "devDependencies": {
+    "@laynezh/vite-plugin-lib-assets": "^0.5.6",
     "browserslist": "^4.22.1",
     "postcss-preset-env": "^9.3.0",
     "sass": "^1.69.5",

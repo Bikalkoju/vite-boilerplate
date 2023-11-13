@@ -1,0 +1,22 @@
+// Font Family
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'system-ui';
+
+// Colors
+$primary-color: aqua;
+$secondary-color: lightgreen;
+$tertiary-color: red;
+$white: #fff;
+$black: #000;
+
+// breakpoints
+$breakpoints: (
+    'extra-small': 420px,
+    'smaller': 575px,
+    'small': 767px,
+    'medium': 991px,
+    'wide': 1199px,
+    'wider': 1439px,
+    'extra-wide': 1919px,
+    'ultra-wide': 2559px
+);

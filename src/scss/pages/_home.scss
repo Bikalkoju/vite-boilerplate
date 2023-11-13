@@ -1,0 +1,4 @@
+body {
+    @include bg-img('../images/roronoza-zoro-statue-in-japan.jpg', repeat, 0 0, 50px 50px);
+    @include fade(in);
+}

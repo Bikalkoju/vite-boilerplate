@@ -1,0 +1,77 @@
+// Media queries
+@mixin breakpoint($point) {
+    @each $breakpoint, $value in $breakpoints {
+        @if $point ==$breakpoint {
+            @media only screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+
+    @if $point =='landscape' {
+        @media only screen and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @if $point =='portrait' {
+        @media only screen and (orientation: portrait) {
+            @content;
+        }
+    }
+}
+
+// Background Image
+@mixin bg-img($url, $repeat: no-repeat, $position: center, $size: cover) {
+    background: url(#{$url}) $repeat $position / $size;
+}
+
+// Placeholder
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::placeholder {
+        @content;
+    }
+}
+
+// fade in/out
+@mixin fade($fade, $transition-time: .4s) {
+    @if $fade ==in {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @if $fade ==out {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    transition: opacity #{$transition-time},
+    visibility #{$transition-time};
+}
+
+// Keyframes
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
